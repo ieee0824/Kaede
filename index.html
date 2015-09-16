@@ -5,10 +5,11 @@
 <title>JavaScript Sample</title>
 <link rel="stylesheet" type="text/css" href="main.css" media="all">
 <script type="text/javascript">
+var ft = 0;
+var et = 0;
 window.onload = function(){
     window.document.onkeydown = function(evt){
-        var ft = 0;
-        var et = 0;
+
         if(evt){
             var kc = evt.keyCode;
             var date = new Date();
@@ -34,7 +35,7 @@ window.onload = function(){
         var chr = String.fromCharCode(kc);
         var t = et - ft;
         //document.getElementById("result").innerHTML+=kc+"("+chr+"):"+date+"<br>";
-        document.getElementById("result").innerHTML+=date+":"+t+"<br>";
+        document.getElementById("result").innerHTML+=date+":"+t+"ms<br>";
     }
 }
 </script>
